@@ -1,0 +1,36 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+
+    <div class="features">
+        <h1>Новости на сайте</h1>
+
+        {% if page_obj %}
+            {% for el in page_obj %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                    <p>Кол-во коментариев: {{ el.all_comments }}</p>
+                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Читать детальнее</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Нет записей!</p>
+        {% endif %}
+
+
+        <nav class="navbar navbar-expand-lg ">
+            <ul class="navbar-nav mx-auto">
+                {% for p in page_obj.paginator.page_range %}
+                <li class="nav-item mr-2">
+                    <a href="?page={{ p }}" class="btn btn-outline-light">{{ p }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+    
+{% endblock %}
+
