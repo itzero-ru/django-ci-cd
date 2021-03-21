@@ -20,6 +20,6 @@ jobs:
           docker-compose down
           git pull
           docker-compose build
-          docker-compose up
+          docker-compose up -d
           docker-compose ps
           pwd
