@@ -19,7 +19,7 @@ jobs:
           # pwd > /home/eddiezane/pwd.log
           cd /home/eddiezane/django-ci-cd
           docker-compose down
-          # git pull
+          git pull
           docker-compose build
           docker-compose up -d
           docker-compose ps
