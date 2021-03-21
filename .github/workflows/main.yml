@@ -17,8 +17,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/eddiezane/django-ci-cd
+          docker-compose down
           git pull
-          docker-compose up -d
+          docker-compose build
+          docker-compose up
           docker-compose ps
           pwd
-          cd ~ && echo 444
