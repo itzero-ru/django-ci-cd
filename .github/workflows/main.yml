@@ -17,4 +17,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/eddiezane/django-ci-cd && echo "ffff"
-          cd ~ && mkdir test111
+          cd ~ && mkdir test88
