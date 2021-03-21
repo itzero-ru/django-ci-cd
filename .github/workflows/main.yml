@@ -17,6 +17,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/eddiezane/django-ci-cd && echo "ffff"
-          cd ~ && mkdir test111 
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          cd ~ && mkdir test111
