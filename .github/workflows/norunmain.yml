@@ -17,7 +17,7 @@ jobs:
           mkdir ~/.ssh
           echo $TMP_SSH_KEY > ~/.ssh/id_rsa.pub
           sudo apt-get install expect
-          echo -e 'spawn ssh root@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\ninteract\n' > ssh1.sh
+          echo -e 'spawn ssh eddiezane@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\ninteract\n' > ssh1.sh
           sudo chmod +x ssh1.sh
           ls -la
         env:
