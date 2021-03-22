@@ -1,24 +1,19 @@
-# This is a basic workflow to help you get started with Actions
-name: CI
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+name: Command via SSH
 
-  workflow_dispatch:
+on: push
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Install SSH key
-      uses: shimataro/ssh-key-action@v2
-      with:
-        key: ${{ secrets.srv-test }}
-        name: id_rsa # optional
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
-        if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
-    - name: rsync over ssh
-      run: rsync ./foo/ eddiezane@test-srv.itzero.ru:~/
-
-
+      - name: ls -a via OPEN SSH Private Key
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ls -a
+          host: test-srv.itzero.ru
+          username: garygrossgarten
+          password: ${{ secrets.PASSPHRASE }}
+          privateKey: ${{ secrets.PRIVATE_KEY}}
+        env:
+          CI: true
