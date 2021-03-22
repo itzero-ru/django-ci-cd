@@ -19,6 +19,7 @@ jobs:
           sudo apt-get install expect
           echo -e 'spawn ssh eddiezane@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\ninteract\n' > ssh1.sh
           sudo chmod +x ssh1.sh
+          touch uraaaa.txt
           ls -la
         env:
           TMP_SSH_KEY: ${{ secrets.SECR }}
