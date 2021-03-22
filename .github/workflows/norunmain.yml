@@ -13,7 +13,7 @@ jobs:
           command: ls -a
           host: test-srv.itzero.ru
           username: eddiezane
-          password: ${{ secrets.PAS }}
+          privateKey: ${{ secrets.SECR}}
         
         env:
           CI: true
