@@ -12,7 +12,7 @@ jobs:
         with:
           command: ls -a
           host: test-srv.itzero.ru
-          username: garygrossgarten
+          username: eddiezane
           password: ${{ secrets.PASSPHRASE }}
           privateKey: ${{ secrets.PRIVATE_KEY}}
         env:
