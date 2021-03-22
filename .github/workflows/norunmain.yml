@@ -13,7 +13,6 @@ jobs:
           command: ls -a
           host: test-srv.itzero.ru
           username: eddiezane
-          privateKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWNotP7uXBCnSQddbjbpbfeGg1TjaHwJab9qR5RwTUoWtK6iw9X5HpsMJBvQa2Gir4OtY+3Vb47cfGKN/NPRGR3PAkeO8pIBQ9qHT2tKILEr5m5wCF79e7eo+4Fw4Ikn6LCMPLsdsgBStb9X3iixyDC4IAfY6crp4paGj6A4UOaA1EuGsV2ZDN7IUX8CIBNFZKu/S96zncCQdCEBfg5FY18JhxvuAYgDjdioCmrvF3UAyuKW3Q2L5ZlOM+oopRfzl3PKm/x7u0oLBqMMu6S3pjnUPqbueCfM2D9qMHW8sTkM+CjsHWuU2I53hPIkPB3cqFAFU9OYxFCgY0oaKoPL7t9XQ8jqSlIPaWK/htZjSVQUti+SuuqTzgdkfgKANrtQBz8b8DeJBTcEunCbw5KUv53RJ0Uz6JC6NjkhDqy3ALzDmnbXeGxZ9eSQqnr0254fDVWVi2vZLOyKAlfFnuAiR6STxn7PlEdW3XIzfP67zjzPGoeMZm9ry6ILLCzLZwLck= eddiezane@paw100d"
-          
+          privateKey: ${}
         env:
           CI: true
