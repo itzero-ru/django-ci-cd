@@ -20,9 +20,8 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         name: id_rsa # optional
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-        config: ${{ secrets.CONFIG }} # ssh_config; optional
         if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
     - name: rsync over ssh
-      run: rsync ./foo/ user@remote:bar/
+      run: rsync ./foo/ eddiezane@test-srv.itzero.ru:~/
 
 
