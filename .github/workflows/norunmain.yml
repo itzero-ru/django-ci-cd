@@ -16,12 +16,9 @@ jobs:
         run: |
           mkdir ~/.ssh
           echo $TMP_SSH_KEY > ~/.ssh/id_rsa.pub
-          echo Add other actions to build,
           sudo apt-get install expect
-          echo OK1
           echo -e 'spawn ssh root@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\ninteract\n' > ssh1.sh
           sudo chmod +x ssh1.sh
-          cat ssh1.sh
-          ls
+          ls -la
         env:
           TMP_SSH_KEY: ${{ secrets.SECR }}
