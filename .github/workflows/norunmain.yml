@@ -23,7 +23,7 @@ jobs:
           echo Add other actions to build,
           sudo apt-get install expect
           echo OK1
-          echo -e "spawn ssh root@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\nexpect "Password:"\nsend "8403120Pa\n"\ninteract\n" > ssh1.sh
+          echo -e 'spawn ssh root@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\nexpect "Password:"\nsend "8403120Pa\n"\ninteract\n' > ssh1.sh
           sudo chmod +x ssh1.sh
           cat ssh1.sh
           ls -la
