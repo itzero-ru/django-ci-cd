@@ -23,4 +23,4 @@ jobs:
           cat ssh1.sh
           ls
         env:
-          TMP_SSH_KEY: ${{ secrets.PAS }}
+          TMP_SSH_KEY: ${{ secrets.SECR }}
