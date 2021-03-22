@@ -23,5 +23,6 @@ jobs:
           /usr/bin/expect -f ./ssh1.sh && ls
           ip a
           ls -la
+          cat docker-compose.yml
         env:
           TMP_SSH_KEY: ${{ secrets.SECR }}
