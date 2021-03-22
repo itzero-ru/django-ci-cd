@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run a multi-line script
-        run: |
+        run: >
           mkdir ~/.ssh
           echo $TMP_SSH_KEY > ~/.ssh/id_rsa.pub
           sudo apt-get install expect
