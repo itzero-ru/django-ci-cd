@@ -1,19 +1,32 @@
-name: Command via SSH
+# This is a basic workflow to help you get started with Actions
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-on: push
-
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-latest
-
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: ls -a via OPEN SSH Private Key
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: ls -a
-          host: test-srv.itzero.ru
-          username: eddiezane
-          privateKey: ${{ secrets.SECR }}
-        
-        env:
-          CI: true
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          sudo apt-get install expect
+          echo OK1
+          echo -e 'spawn ssh root@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\ninteract\n' > ssh1.sh
+          sudo chmod +x ssh1.sh
+          cat ssh1.sh
+          ls -la
+          /usr/bin/expect -f ssh1.sh
+          ip a
+          echo test, and deploy your project.
