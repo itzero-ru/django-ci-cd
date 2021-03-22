@@ -19,6 +19,7 @@ jobs:
           sudo apt-get install expect
           echo -e 'spawn ssh eddiezane@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\ninteract\n' > ssh1.sh
           sudo chmod +x ssh1.sh
+          ssh1.sh
           ip a
           ls -la
         env:
