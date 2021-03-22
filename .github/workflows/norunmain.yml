@@ -33,7 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          apt install expect
+          apt-get install expect
           echo OK1
           echo test, and deploy your project.
 
