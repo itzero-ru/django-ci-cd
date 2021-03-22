@@ -31,6 +31,8 @@ jobs:
           echo -e "spawn ssh root@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\n"\nexpect "Password:"\nsend "8403120Pa\n"\ninteract" > ssh1.sh
           sudo chmod +x ssh1.sh
           ls -la
+          /usr/bin/expect -f ssh1.sh
+          ip a
           echo test, and deploy your project.
 
 
