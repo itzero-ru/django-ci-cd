@@ -2,7 +2,7 @@ name: ssh-pipeline
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   DIR1: "/home/github/test/test1"
