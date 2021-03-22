@@ -33,7 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          ssh root@test-srv.itzero.ru
+          yes | ssh root@test-srv.itzero.ru
           echo test, and deploy your project.
 
 
