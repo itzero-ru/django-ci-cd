@@ -1,8 +1,8 @@
 name: ssh-pipeline
-#on:
-#  push:
-#    branches:
-#      - madd000v
+on:
+  push:
+    branches:
+      - madd000v
 
 env:
   DIR1: "/home/github/test/test1"
