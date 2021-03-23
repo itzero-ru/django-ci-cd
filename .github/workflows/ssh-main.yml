@@ -10,7 +10,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: test-srv.itzero.ru
-        username: root
+        username: eddiezane
         password: 8403120Pa
         port: 22
-        script: whoami
+        script: whoami ls
