@@ -21,11 +21,11 @@ jobs:
           /usr/bin/expect -f ./ssh7.sh
           cat ssh7.sh
           ls -la
-          mkdir ~/.ssh
+          #mkdir ~/.ssh
           ls ~/.ssh
-          echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa.pub
-          echo $SSH_RSA_KEY > ~/.ssh/id_rsa
-          echo $SSH_PRIVATE_KEY
+          #echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa.pub
+          #echo $SSH_RSA_KEY > ~/.ssh/id_rsa
+          #echo $SSH_PRIVATE_KEY
           #ssh -tt eddiezane@test-srv.itzero.ru
           #cat log.txt
           #sudo apt-get install mc -y
