@@ -4,18 +4,15 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo Hello, world!
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
+          sudo apt-get install ssh -y
           #sudo apt-get install mc -y
           ls
           #sudo ping -c 2 8.8.8.8
