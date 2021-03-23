@@ -13,10 +13,12 @@ jobs:
       - name: Run a multi-line script
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SECR }}
+          SSH_RSA_KEY: ${{ secrets.SECR_RSA }}
         run: |
           mkdir ~/.ssh
           ls ~/.ssh
           echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa.pub
+          echo $SSH_RSA_KEY > ~/.ssh/id_rsa
           echo $SSH_PRIVATE_KEY
           ssh -tt eddiezane@test-srv.itzero.ru
           #cat log.txt
