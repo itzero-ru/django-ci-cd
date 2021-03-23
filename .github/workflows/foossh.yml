@@ -1,0 +1,34 @@
+name: ssh-pipeline
+#on:
+#  push:
+#    branches:
+#      - madd000v
+
+env:
+  DIR1: "/home/github/test/test1"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+
+      - name: ssh pipeline 1
+        uses: cross-the-world/ssh-pipeline@master
+        env:
+          WELCOME: "ssh pipeline"
+          DIR2: "/home/github/test/test2"
+        with:
+          host: test-srv.itzero.ru
+          user: eddiezane
+          pass: ${{ secrets.PAS }}
+          port: 22
+          connect_timeout: 10s
+          script: |
+            ls -la
+            echo $WELCOME
+            (mkdir -p $DIR1 || true) &&
+            (mkdir -p $DIR2 || true)
