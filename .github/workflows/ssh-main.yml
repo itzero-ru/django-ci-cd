@@ -13,4 +13,6 @@ jobs:
         username: eddiezane
         password: 8403120Pa
         port: 22
-        script: whoami ls
+        script: |
+          whoami 
+          ls
