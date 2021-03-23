@@ -11,7 +11,7 @@ jobs:
       with:
         host: test-srv.itzero.ru
         username: eddiezane
-        key: ${{ secrets.SECR_RSA }}
+        key: ${{ secrets.SECR }}
         #password: 8403120
         port: 22
         script: |
