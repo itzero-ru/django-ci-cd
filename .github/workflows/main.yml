@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a multi-line script
         run: |
-          ssh test-srv.itzero.ru
+          ssh test-srv.itzero.ru /bin/bash <<'EOT'
           #sudo apt-get install mc -y
           ls
           #sudo ping -c 2 8.8.8.8
