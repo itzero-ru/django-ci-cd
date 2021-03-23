@@ -16,6 +16,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          apt-get install mc -y
+          sudo apt-get install mc -y
           ls
           
