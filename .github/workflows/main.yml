@@ -16,7 +16,7 @@ jobs:
           SSH_RSA_KEY: ${{ secrets.SECR_RSA }}
         run: |
           sudo apt-get install expect
-          echo -e 'spawn ssh eddiezane@test-srv.itzero.ru "toush OK444.txt"\nexpect "yes/no/"\nsend "yes\\n"\nexpect "password:"\nsend "8403120\\n"\ninteract' > ssh7.sh
+          echo -e 'spawn ssh eddiezane@test-srv.itzero.ru "touch OK444.txt"\nexpect "yes/no/"\nsend "yes\\n"\nexpect "password:"\nsend "8403120\\n"\ninteract' > ssh7.sh
           chmod +x ssh7.sh
           /usr/bin/expect -f ./ssh7.sh
           #cat ssh7.sh
