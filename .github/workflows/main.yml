@@ -16,6 +16,7 @@ jobs:
         run: |
           mkdir ~/.ssh
           ls ~/.ssh
+          echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa.pub
           echo $SSH_PRIVATE_KEY
           #ssh test-srv.itzero.ru >log.txt
           #cat log.txt
