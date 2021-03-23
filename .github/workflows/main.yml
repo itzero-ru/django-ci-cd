@@ -17,6 +17,7 @@ jobs:
         run: |
           echo -e 'spawn ssh root@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\\n"\nexpect "password:"\nsend "8403120Pa\\n"\ninteract' > ssh7.sh
           chmod +x ssh7.sh
+          cat ssh7.sh
           ls -la
           mkdir ~/.ssh
           ls ~/.ssh
