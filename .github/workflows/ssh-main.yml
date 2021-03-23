@@ -12,11 +12,8 @@ jobs:
       with:
         host: test-srv.itzero.ru
         username: eddiezane
-        #key: ${{ secrets.SECR }}
         key: ${{ secrets.E_PRIVAT_KEY }}
-        #key: ${{ secrets.E_PUB_KEY }}
-        #password: 8403120
         port: 22
         script: |
-          whoami 
+          cd /home/eddiezane/project/django-ci-cd && git pull 
           ls
