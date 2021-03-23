@@ -11,9 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run a multi-line script
+        env:
+          SSH_PRIVATE_KEY: 4444
         run: |
-          ssh test-srv.itzero.ru >log.txt
-          cat log.txt
+          echo $SSH_PRIVATE_KEY
+          #ssh test-srv.itzero.ru >log.txt
+          #cat log.txt
           #sudo apt-get install mc -y
           ls
           #sudo ping -c 2 8.8.8.8
