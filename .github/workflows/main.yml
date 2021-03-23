@@ -18,4 +18,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           ls
-          ping -c 2 8.8.8.8
+          ping -c 2 localhost
