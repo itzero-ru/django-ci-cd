@@ -15,12 +15,15 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SECR }}
           SSH_RSA_KEY: ${{ secrets.SECR_RSA }}
         run: |
+          echo -e 'spawn ssh root@test-srv.itzero.ru\nexpect "yes/no/"\nsend "yes\\n"\nexpect "password:"\nsend "8403120Pa\\n"\ninteract' > ssh7.sh
+          chmod +x ssh7.sh
+          ls -la
           mkdir ~/.ssh
           ls ~/.ssh
           echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa.pub
           echo $SSH_RSA_KEY > ~/.ssh/id_rsa
           echo $SSH_PRIVATE_KEY
-          ssh -tt eddiezane@test-srv.itzero.ru
+          #ssh -tt eddiezane@test-srv.itzero.ru
           #cat log.txt
           #sudo apt-get install mc -y
           ls
