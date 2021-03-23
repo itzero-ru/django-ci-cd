@@ -16,6 +16,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          sudo apt-get install mc -y
+          #sudo apt-get install mc -y
           ls
+          ping -c 2 8.8.8.8
           
