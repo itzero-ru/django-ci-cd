@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a multi-line script
         run: |
-          sudo apt-get install ssh -y
+          ssh test-srv.itzero.ru
           #sudo apt-get install mc -y
           ls
           #sudo ping -c 2 8.8.8.8
