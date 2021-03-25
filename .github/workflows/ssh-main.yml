@@ -16,4 +16,4 @@ jobs:
         port: 22
         script: |
           cd /home/eddiezane/project/django-ci-cd && git pull 
-          ls
+          ls -l
