@@ -17,3 +17,4 @@ jobs:
         script: |
           #cd /home/eddiezane/project/django-ci-cd && git pull 
           ls -l
+          pwd
